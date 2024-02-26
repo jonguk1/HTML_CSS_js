@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>question_06.html</title>
+    <script>
+        function pay(){
+            let food = document.getElementById("food").value;
+            let price = document.getElementById("price").value;
+            let result = document.getElementById("result");
+
+            if(food == '커피' && price < 5000){
+                result.innerHTML = "<hr style='red'>";
+                result.innerHTML += "<h2>내가 살게요</h2>";
+            }else{
+                result.innerHTML = "<hr style='red'>";
+                result.innerHTML += "<h2>네가 사세요</h2>";
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <h2>문제 6</h2>
+    <h3>먹고 싶은 음식 : <input type="text" id="food"></h3>
+    <h3>가격 : <input type="text" id="price"></h3>
+    <button onclick="pay()">확인</button>
+    <div id="result">
+    </div>
+</body>
+</html>

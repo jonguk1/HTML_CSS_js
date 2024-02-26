@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>question_07.html</title>
+</head>
+<body>
+    <h2>문제 7</h2>
+    <script>
+        let time = window.prompt('오전인가요? 오후인가요?');
+
+        if(time == '오전'){
+            for(let i = 0; i < 3;i++){
+                document.write("<h3>굿모닝!</h3>");
+            }
+        }else if(time == '오후'){
+            for(let i = 0; i < 5;i++){
+                document.write("<h3>굿애프터눈!</h3>");
+            }
+        }else{
+            for(let i = 0; i < 10;i++){
+                document.write("<h3>굿나잇!</h3>"); 
+            }
+        }
+    </script>
+</body>
+</html>

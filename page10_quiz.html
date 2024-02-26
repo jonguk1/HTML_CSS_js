@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>page10_quiz.html</title>
+</head>
+<body>
+    교안 34p 1,2,3,4번 문제를 풀어보기
+    <script>
+        // 1번
+        let price = parseInt(window.prompt('물건의 하나당 가격은?'));
+        let quantity = parseInt(window.prompt('물건의 개수는?'));
+
+        document.write('<h2>물건의 전체 가격은'+ (price*quantity) +'원입니다</h2>');
+
+        // 2번
+        let totalprice = parseInt(window.prompt('전체 구매 금액은?'));
+        let price2 = parseInt(window.prompt('물건 하나당 가격은?'));
+
+        document.write('<h2>물건의 개수는'+ (amount/num2) +'개입니다</h2>');
+        
+        // 3번
+        let apple = parseInt(window.prompt('사과의 가격은?'));
+        let pear = parseInt(window.prompt('배의 가격은?'));
+        let appleQuantity = parseInt(window.prompt('사과 구매 개수는?'));
+        let pearQuantity = parseInt(window.prompt('배 구매 개수는?'));
+
+        document.write('<h2>'+((apple * appleQuantity) > (pear * pearQuantity))+'</h2>');
+        
+        // 4번
+        let yesterdayTemp = parseInt(window.prompt('어제 온도는?'));
+        let todayTemp = parseInt(window.prompt('오늘 온도는?'));
+
+        document.write('<h2>어제와 오늘의 평균온도는'+ 
+           ((yesterdayTemp +todayTemp )/2)+'℃입니다</h2>');
+        
+    </script>
+</body>
+</html>

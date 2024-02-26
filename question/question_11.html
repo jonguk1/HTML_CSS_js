@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>question_11.html</title>
+    <script>
+        function go(){
+            let result = document.getElementById("result");
+            for(let i = 0; i<101; i++){
+                result.innerHTML += "<h3>" + i + "</h3>" 
+            }
+        }
+    </script>
+</head>
+<body>
+    <button style="width : 200px; height: 50px;" onclick="go()">go 100</button>
+    <span id ="result">
+    </span>
+</body>
+</html>

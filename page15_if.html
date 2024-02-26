@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>page15_if.html</title>
+</head>
+<body>
+    <h1>제어문 (조건문,반복문) </h1>
+    <!-- 
+        자바스크립트 제어문
+        [1] 순차문
+        [2] 조건문 : 
+            <1> if문
+            <2> switch ~ case문
+        [3] 반복문
+            <1> for 루프문
+            <2> while 루프문
+            <3> do ~ while루프문                
+     -->
+     <h2>조건문: if, if~else, if~else if~else</h2>
+     <hr>
+     <script>
+        var num = parseInt(prompt("정수를 입력하세요"));
+        if(num >0){//참일때
+            document.write(`<h2>${num}은 양수 입니다~</h2>`);
+            document.write("+++++++++++++++++++++++++++++");
+        }else{//거짓일때
+            document.write(`<h2>${num}은 0이거나 음수입니다</h2>`);
+            document.write('-----------------------------9');
+        }
+        document.write("<h2>@@@@@</h2>");
+     </script>
+</body>
+</html>

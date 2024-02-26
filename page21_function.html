@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>page21_function.html</title>
+    <style>
+        #result{
+            background-color: yellow;
+            height: 150px;
+        }
+        body{
+            padding: 2em;
+        }
+    </style>
+    <script>
+        function rectangle(){
+            //1. 가로값, 세로값 얻어오기
+            let w=document.getElementById("n1").value;
+            let l=document.getElementById("n2").value;
+            //alert(w);
+            //2. 유효성 체크
+            if(!w){
+                alert("가로값을 입력하세요");
+                document.getElementById("n1").focus();
+                return;
+            }else if(!l){
+                alert("세로값을 입력하세요");
+                document.getElementById("n2").focus();
+                return;
+            }
+
+            //3. 사각형 면적 구해 id가 result인 곳에 출력하기
+            let obj = document.getElementById("result");
+            let area = parseInt(w)*parseInt(l);
+            //alert(obj);//HTMLDivElement
+            obj.innerHTML="<h3>가로값: " + w + "cm</h3>";
+            obj.innerHTML+=`
+            <h3>세로값:${l}cm</h3>
+            <h3>사각형 면적:${area}cm</h3>
+            `;
+
+        }
+
+        //원의 면적 구하는 함수 구성하고 호출하기
+        function circle(){
+            //1. 반지름값 얻어오기
+            let r = document.getElementById("r").value;
+            //2. 유효성 체크
+            if(!r){
+                alert("반지름값을 입력하세요");
+                return;
+            }
+            //3. 원 면적 구해 id가 result인 곳에 출력하기
+            let obj = document.getElementById("result");
+            obj.innerHTML="<h3>원의 면적: " 
+                + (parseFloat(r)**2 * 3.14) + "</h3>";
+        }
+
+    </script>
+</head>
+<body>
+    가로값 : <input type="text" id="n1"><br>
+    세로값 : <input type="text" id="n2"><br>
+    <button onclick="rectangle()">사각형의 면적 구하기</button>
+    <hr>
+    반지름 : <input type="text" id="r"><br>
+    <button onclick="circle()">원의 면적 구하기</button>
+    <hr color="red">
+    <div id="result">
+    </div>
+</body>
+</html>

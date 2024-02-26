@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>대입연산자,비교연산자(=, ==, ===, !=, !==, > ,>=,<,<=)</h1>
+    <hr>
+    <script>
+        let x = 5; //=: 대입연산자, 할당연산자
+        //x : number
+        let y = 5.0;
+        //y : number
+        let z = "5";
+        //z : string
+
+        function print(str){
+            document.write('<h3>'+str+'</h3>');
+        }
+
+        print("x == y : " + (x == y));// == : 값이 같으면 true, 다르면 false
+        print("x == z : " + (x == z));//true
+
+        //=== : 값도 같고 자료형도 같아야 true
+        print("x === y " +(x===y));//true
+        print("x === z " +(x===z));//number === string ,false
+
+        //!= : 값이 다르면 true
+        //!== : 값이 다르거나 자료형이 다르면 true
+        print("x!=z : " + (x != z)); //false
+        print("x!==z : " + (x !== z)); //true
+
+        let a = 5;
+        let b = 3;
+        print('a > b: ' + (a>b));//true
+        print('a &lt b: ' + (a<b));//false
+        //>= : 크거나 같으냐?
+        //<= : 작거나 같으냐?
+        print('a >= b: ' + (a>=b));//true
+    </script>
+</body>
+</html>

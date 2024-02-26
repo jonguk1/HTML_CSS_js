@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>computer_shop</title>
+    <link rel="stylesheet" type="text/css" href="../css/computer.css">
+    <script src="../js/computer.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="title">
+            <img src="../images/icon3.PNG" class="icon">
+            <a href="index.html" class="hometitle">Estimate</a>
+            <button class="login">Sign Up</button>
+            <button class="login">Log In</button>
+        </div>
+        <nav>
+            <ui>
+                <li>컴퓨터</li>
+                <li>부품</li>
+                <li>행사</li>
+                <li>견적짜기</li>
+                <li>커뮤니티</li>
+                <li>고객센터</li>
+            </ui>
+        </nav>
+    </header>
+    <section>
+        <p class="estimate">추천견적 </p>
+        <div class="slider">
+            <img src="../images/computer.PNG" class="computerimg">
+            <table>
+                <tr>
+                    <td>CPU</td>
+                    <td><input type="text" class="part" value="인텔 i5-13400F" readonly></td>
+                </tr>
+                <tr>
+                    <td>VGA</td>
+                    <td><input type="text" class="part" value="MSI RTX 3060Ti" readonly></td>
+                </tr>
+                <tr>
+                    <td>RAM</td>
+                    <td><input type="text" class="part" value="DDR 8GB 25600 X 2" readonly></td>
+                </tr>
+                <tr>
+                    <td>SSD</td>
+                    <td><input type="text" class="part" value="M.2 NVMe 500GB" readonly></td>
+                </tr>
+            </table>
+            <ui class="option">
+                <li>무료배송</li>
+                <li>사은품</li>
+                <li>출장A/S</li>
+            </ui>
+            <div class="cash">
+                <h3>1,000,000원</h3>
+            </div>
+        </div>
+        <div class="page">
+            <button class="prev" style = "visibility: hidden;">이전</button>
+            <button class="next" onclick="replaceLink1()">다음</button>
+        </div>
+    </section>
+    <footer>
+        <span class="private">
+            <a href="#">이용약관</a>
+            <span>|</span>
+            <a href="#">개인정보처리방침</a>
+            <span>|</span>
+            <a href="#">청소년 보호정책</a>
+            <span>|</span>
+            <a href="#">사이트맵</a>
+            <span>|</span>
+            <a href="#">광고센터</a>
+            <span>|</span>
+            <a href="#">협력사문의</a>
+        </span>
+    </footer>
+</body>
+</html>

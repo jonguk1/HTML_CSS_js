@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>page12_operator.html</title>
+</head>
+<body>
+    <h1>연산후 할당(대입) 연산자</h1>
+    <h2>+=, -=, *=, /=, %=</h2>
+    <hr>
+    <script type="text/javascript">
+        let x =5;
+        let y =x;//할당(대입) 연산자
+        print("x: " + x);
+        print("y: " + y);
+        
+        y+=3; // y=y+3;
+        print("y: " + y);
+
+        y-=2;//y=y-2;
+        print("y: " + y);
+
+        y*=4 // y=y*4;
+        print("y: " + y);
+
+        y/=3 // y=y/3;
+        print("y: " + y);
+
+        y%=2 // y=y%2;
+        print("y: " + y);
+        let text1 = "Good ";
+        let text2 = "Morning";
+        let text3 = text1 + text2;//문자열 결합
+
+        text1 += text2; //text1= text1+text2
+
+        print(text3);
+        print(text1);
+
+        function print(str){
+            document.write("<h3>" + str + "</h3>");
+        }
+    </script>
+</body>
+</html>

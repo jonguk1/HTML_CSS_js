@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>page23_window.html</title>
+    <script>
+        /*window객체의 함수
+            - alert(), prompt(), confirm()
+            - open(url, target, "속성들") : 팝업창을 열어준다
+            - close() : 팝업창 닫기
+        */
+        let win = null;//팝업창을 참조할 변수
+        function openWin(){
+            win = window.open("page01.html","_blank",
+            "width=500, height=500, left=200, top=200");
+            //win ==> 새로운 윈도우창을 참조(팝업창)
+            alert(win);
+        }//----------------
+        function closeWin(){
+            if(win != null){
+                win.close();
+                win = null;
+            }
+        }//----------------
+        function question(){
+            let yn = window.confirm("정말 삭제할까요?");//확인창
+            //alert("yn: " + yn);
+            if(yn){
+                alert('삭제하러 갑니다');
+            }
+        }//----------------
+        let wid = null;
+        function alarm(){
+            //3초 뒤에 alert('꽝')
+            //setTimeout(함수, 밀리초)
+            wid = setTimeout(show, 3000);
+            //3초뒤에 show함수를 호출함=> 딱 한번만 호출함
+        }
+        function show(){
+            alert('꽝!!!');
+        }
+        function clearTime(){
+            if(wid != null){
+                clearTimeout(wid);
+                wid = null;
+            }
+        }
+
+        let x =20;//공의 x좌표
+        function move(){
+            let obj = document.getElementById("circle");
+            //alert(obj);
+            //html객체.style.속성명="속성값"; //style객체 =>css와 관련된 객체
+            //css: background-color :tomato;
+            //javascript
+            //obj.style.background-color = 'tomato'; [x]
+            obj.style.backgroundColor = 'tomato'; 
+
+            if(wid==null){
+                wid=setInterval(function(){
+                    if(x>900){
+                        x=20;
+                    }
+                    console.log("x: ",x);
+                    obj.style.position='absolute';
+                    obj.style.left=x+'px';
+                    x+=5;//5만큼씩 증가
+                },30); //0.03초 단위로 수행
+            }
+        }
+
+        function stopMove(){
+            if(wid!=null){
+                clearInterval(wid);
+                wid=null;
+            }
+        }
+    </script>
+    <style>
+        #circle{
+            width: 100px;
+            height: 100px;
+            background-color: purple;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <h1>BOM (Brower Object Model) - window,location,history,form,input,...</h1>
+    <h2>window객체 (최상위 객체)</h2>
+    <button onclick="openWin()">팝업창 열기</button>
+    <button onclick="closeWin()">팝업창 닫기</button>
+    <button onclick="question()">Confirm</button>
+    <hr>
+
+    <h3>window객체의 setTimeout()/clearTimeout</h3>
+    <button onclick="alarm()">Click Me</button>
+    <button onclick="clearTime()">Stop setTimeout</button>
+
+    <hr color="red">
+    <h3>window객체의 setInterval()/clearInterval()</h3>
+    <p>주기적으로 특정 함수를 계속 실행함</p>
+    <button onclick="move()">setInterval</button>
+    <button onclick="stopMove()">clearInterval</button>
+    
+    <br><br>
+    <div id="circle"></div>
+</body>
+</html>

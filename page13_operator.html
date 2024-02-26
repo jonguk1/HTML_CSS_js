@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>page13_operator.html</title>
+</head>
+<body>
+    <h1>논리 연산자</h1>
+    <h2>&& , ||(or) ,!(not) </h2>
+    <hr>
+    <script>
+        function print(str){
+            //document.write("<h3>" + str + "</h3>");
+            document.write(`<h3 style="color:blue;">${str}</h3>`);
+        }
+
+        let a = 50;
+        let b = 60;
+        print("a: " + a + ", b: " + b);
+        /*and
+        T && T : T
+        T && F : F
+        F && T : F
+        F && F : F
+        */
+
+        print("(a>b)&&(b==60) : " + ((a>b)&&(b==60)));
+        print("(a&lt;b)&&(b==60) : " + ((a<b)&&(b==60)));
+
+        /*or
+        T|| T: T
+        T|| F: T
+        F|| T: T
+        F|| F: F
+        */
+
+        print("(a>b)||(b==60) : " + ((a>b)||(b==60))); //true
+        print("(a == b)||(b!=60) : " + ((a==b)||(b!=60))); //false
+
+        // not (논리부정 연산자): true => false로, false => true로
+        print(!true);
+        print(!false);
+        print(a>b);//false
+        print(!(a>b));//true
+
+    </script>
+</body>
+</html>

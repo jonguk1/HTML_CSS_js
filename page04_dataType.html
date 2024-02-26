@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>page04_dataType.html</title>
+</head>
+<body>
+    <h1>참조형 - object, function</h1>
+    <script>
+        let car = new Object();// 객체 (속성+행동양식)
+        car.color = "red";//속성 (=>변수)
+        car.capacity = 2000;
+        car.run = function(speed){//행동양식 (==>함수)
+            document.write("<h2>자동차가 시속" + speed + "km로 달려요</h2>");
+        }
+        document.write("car의 자료형: ",typeof car,"<br>");
+        document.write("car.color: ",typeof car.color,"<br>");
+        document.write("car.capacity: ",typeof car.capacity,"<br>");
+        //함수호출
+        car.run(100);
+        car.run(60);
+        car.run(120);
+    </script>
+</body>
+</html>

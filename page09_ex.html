@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>page09_ex.html</title>
+</head>
+<body>
+    <h1>내장함수 - parseInt(), parseFloat()</h1>
+    <h2>parseInt(문자열) : 문자열을 정수로 변환하는 함수</h2>
+    <h2>parseFloat(문자열): 문자열을 실수로 변환하는 함수</h2>
+    <hr>
+    <script>
+        let num1 = "150";//string
+        let num2 = "30";
+        let result = num1 + num2;
+        document.write(result,"<br>");
+
+        result= parseInt(num1) + parseInt(num2);
+        document.write(result,"<br>");
+
+        //변수선언 = window.prompt("message") : 입력상자
+        let name = window.prompt("이름을 입력하세요");
+        document.write("<h2>당신의 이름: " + name + "</h2>");
+        //나이를 입력받고, 5년뒤 당신의 나이는 몇 세입니다를 출력하세요
+        let age = parseInt(window.prompt("나이를 입력하세요"),20);
+        document.write("<h2>5년뒤 당신의 나이는 " + 
+            (age+ 5) + "세입니다</h2>");
+        let afterAge= age + 5;
+        let str = "";
+        if(afterAge >= 40){
+            str = "Old 하군요~";
+        }else if(afterAge >= 30){
+            str = "그래도 청춘이군요~";
+        }else if(afterAge >= 20){
+            str =  "청춘이군요~";
+        }
+        document.write("<h2>" + str + "</h2>")
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>page16_if.html</title>
+</head>
+<body>
+    <h1>다중 if문</h1>
+    <script>
+        var num = -10;
+        var result = "";
+        if(num >0){
+            result = "양수입니다";
+        }else if(num == 0){
+            result = "Zero입니다";
+        }else{
+            result = "음수입니다";
+        }
+        document.write(`<h2>${result}</h2>`);
+    </script>
+    <hr color = "red">
+    <script>
+        //prompt를 이용해서 "어느 검색 사이트를 주로 이용하세요?"
+        //네이버 =>네이버로 이동, 구글 => 구글로 이동, 다음 =>다음으로 이동
+        //그 외 다른 사이트라면? 
+        //현재 문서를 보여주되 "그런 사이트는 안가요~" 를 출력하세요
+        let site = prompt("어느 검색 사이트를 주로 이용하세요?");
+        
+        if(site == "네이버"){
+            location.href = "http://www.naver.com/";
+        }else if(site == "구글"){
+            location.href = "http://www.google.com/";
+        }else if(site == "다음"){
+            location.href = "http://www.daum.net/";
+        }else{
+            document.write('<h2>그런 사이트는 안가요~</h2>');
+        }
+    </script>
+</body>
+</html>

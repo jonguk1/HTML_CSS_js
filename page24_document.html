@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>page24_document.html</title>
+    <script>
+        //id가 btn인 객체를 얻어와서 배경색을 yellow로, border는 none로 주세요
+        //let btn = document.getElementById("btn");
+        //alert(btn);//null
+        let b1 =null;
+
+        /*document객체의 속성과 함수
+          [1] title 속성: 현재 문서의 제목을 출력하거나 설정
+          [2] lastModified속성: 현재 html문서가 마지막에 저장된 시간
+          [3] write() 함수
+          [4] getElementById('아이디명'), querySelector(selector), 
+                getElementsByTagName('태그명'),
+                getElementsByClassName('클래스명'),
+                querySelectorAll(선택자)
+          [5] fgColor속성: 글자색
+          [6] bgColor속성: 배경색
+        */
+
+        window.onload=function(){
+            //윈도우 객체에 메모리가 다 로드되고 난 후 익명함수를 수행함
+            //b1=document.getElementById('btn');
+            b1= document.querySelector("#btn");//선택자
+            //alert('b1: ' +b1);
+            b1.style.backgroundColor = "orange";
+            b1.style.border="none";
+
+            //tag명이 button인 요소를 얻어오자
+            //let btns=document.getElementsByTagName("button");
+            let btns=document.querySelectorAll("button");
+            //alert("btns: " +btns);//HTMLCollection => 여러 html요소를 담는 객체
+            //alert(btns.length);
+            btns[1].style.backgroundColor = "blue";
+            btns[1].style.color="#FFF";
+        }//onload()------------------------------
+        function change(){
+            //document의 배경색을 변경, 글자색도 변경, title도 변경
+            document.fgColor = "white";
+            document.bgColor = "skyblue";
+            document.title = "문서제목"
+
+
+        }//-------------------------------------
+        const changeList=function(){
+            //class명이 js인 li요소들을 찾아서 border값을  thick dashed 색상
+            //글자크기 1.2em
+            // let lists=document.getElementsByClassName('js');
+            let lists=document.querySelectorAll('.js');
+            
+            for(let i = 0; i<lists.length; i++){
+                lists[i].style.border="thick dashed lightblue";
+                lists[i].style.fontSize="1.2em";               
+            }
+            
+        }//-------------------------------------
+
+
+    </script>
+</head>
+<body>
+    <h1>BOM객체 - document객체</h1>
+    <hr>
+
+    <button id="btn" onclick="change()">Click Me</button>
+    <button onclick="changeList()">Click Me2</button>
+    <hr color="red">
+    <ul>
+        <li id="html">HTML</li>
+        <li id="css">CSS</li>
+        <li class="js">JavaScript</li>
+        <li class="js">jQuery</li>
+        <li class="js">React</li>
+    </ul>
+    <script>
+        //id가 btn인 객체를 얻어와서 배경색을 yellow로, border는 none로 주세요
+        btn = document.getElementById("btn");
+        //alert(btn);//HTMLButtonElement
+    </script> 
+</body>
+</html>

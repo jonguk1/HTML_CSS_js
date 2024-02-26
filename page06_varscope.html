@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>page06_varscope.html</title>
+</head>
+<body>
+    <h1>변수의 유효범위 (scope)</h1>
+    <h2>전역변수(global), 지역변수(local)</h2>
+    <hr>
+    <script>
+        var global = '전역 변수';//전역변수(전역에서 사용가능)
+        document.write('global : ',global,'<br>');
+        function hello(){
+            var local = '지역 변수';//지역변수(속해있는 블랙내부에서만 사용가능)
+            document.write('local : ',local,'<br>');
+            alert('global: ' + global);
+        }
+    </script>
+    <hr color="red">
+
+    <script>
+        document.write('global : ',global,'<br>');
+        //document.write('local : ',local,'<br>');
+        //hello()함수 호출
+        hello();
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>question_05.html</title>
+    <style>
+        input[readonly]{
+            background-color: silver;
+        }
+    </style>
+        <script>
+            function discount(){
+                let price = document.getElementById("price").value;
+                let num = document.getElementById("num").value;
+                let totalprice = (parseInt(price) * parseInt(num));
+                
+                document.getElementById("totalprice").value 
+                = totalprice;
+    
+                let result = document.getElementById("result");
+    
+                if(totalprice >= 15000){
+                    result.innerHTML = '<hr style="red">';
+                    result.innerHTML +='<h2>할인해드릴게요</h2>';
+                    
+                }else{
+                    result.innerHTML = '<hr style="red">';
+                    result.innerHTML += '<h2>정가로 내셔야해요</h2>';
+                }
+    
+            }
+        </script>
+</head>
+<body>
+    <h2>문제 5</h2>
+    <h3>커피값 : <input type="text" id = "price"></h3>
+    <h3>잔수 : <input type="text" id = "num"></h3>
+    <h3>결제금액 : <input type="text" id = "totalprice" readonly></h3>
+    <button onclick=" discount()">계산</button>
+    <div id="result">
+    </div>
+</body>
+</html>

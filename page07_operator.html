@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>page07_operator.html</title>
+</head>
+<body>
+    <h1>연산자(+,-,*,/,%,++,--)</h1>
+    <hr>
+    <script>
+        let num1 = 7;
+        let num2 = 2;
+        function print(str){
+            document.write('<h3>'+str+'</h3>');
+        }
+
+        print(num1+num2);
+        print(num1-num2);
+        print(num1*num2);
+        print(num1/num2);//나누기 몫을 구함
+        print(num1%num2);//나누기 나머지를 구함
+    </script>
+    <hr>
+    <h2>증감 연산자(++, --)</h2>
+    <script>
+        let x = 3;
+        print(x);//3
+        x++; //x=x+1;
+        print(x);//4
+        ++x;
+        print(x);//5
+        /*
+        ++ : 단독으로 사용하지 않을 경우 변수 앞에 오는지, 뒤에 오는지
+        */
+        //     에 따라 다르게 동작할 수 있다.
+        // 전위 연산자: 1을 증가시킨 뒤 해당 변수를 사용함
+        // 후위 연산자: 변수가 가진값을 먼저 사용한 뒤에 1을 증가시킨다
+        // y값을 1증가신 뒤, 그 값을 z에 할당
+
+        let y = 5;
+        let z = y++;
+        print('y: '+y);//6
+        print('z: '+z);//5
+
+        y=5;
+        let m = ++y;
+        print('y: '+y);//6
+        print('m: '+m);//6
+
+        m--;//m=m-1;
+        print('m: ' +m);//5
+        --m;
+        print('m: ' +m);//4
+
+        print('m: ' +m--);//4출력후 m은 3이 된다
+        print('m: ' +--m);//2로 감소시키고 출력
+
+    </script>
+
+</body>
+</html>

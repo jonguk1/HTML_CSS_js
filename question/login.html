@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login.html</title>
+    <script>
+        function login(){
+            let id = document.getElementById("id").value;
+            let password = document.getElementById("password").value;
+            let result = document.getElementById("result");
+
+            if(id == "root" && password == "1234"){
+                result.innerHTML = "<hr style='color: green;'>";
+                result.innerHTML += 
+                `<h2 style='color: green;'>${id}님 환영합니다~~<h2>`;
+            }else{
+                result.innerHTML = "<hr style='color: red;'>";
+                result.innerHTML += 
+                "<h2 style='color: red;'>실패!! 아이디 또는 비밀번호가 틀려요<h2>";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>로그인</h1>
+    <div>
+        <h4>아이디 : <input type="text" id="id"></h4>
+    </div>
+    <div>
+        <h4>비밀번호 : <input type="password" id="password"></h4>
+    </div>
+    <button onclick="login()">Login</button>
+    <div id="result">
+    </div>
+</body>
+</html>
